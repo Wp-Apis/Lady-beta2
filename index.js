@@ -8257,6 +8257,7 @@ case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'musi
         return reply("Não foi possível baixar ou encontrar esse áudio.");
     }
 }
+break;
 case 'Playvid': case 'playvideo': case 'playvid': case 'clipe': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}playvideo nome da música`);
