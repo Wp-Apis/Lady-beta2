@@ -8259,15 +8259,21 @@ case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'musi
 }
 case 'Playvid': case 'playvideo': case 'playvid': case 'clipe': {
     try {
-        if (!q.trim()) return reply(`- Exemplo: ${prefix}playvideo nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
-        
-        // Nova API para download de vídeo
-        blackmd.sendMessage(from, { video: { url: `https://world-ecletix.onrender.com/api/clipe?name=${encodeURIComponent(firstResult.title)}` }, mimetype: "video/mp4", fileName: firstResult.title || "play.mp4" }, { quoted: info }).catch(e => {
+        if (!q.trim()) return reply(`- Exemplo: ${prefix}playvideo nome da música`);
+
+        // Enviar o vídeo diretamente da API
+        blackmd.sendMessage(from, { 
+            video: { url: `https://world-ecletix.onrender.com/api/clipe?name=${encodeURIComponent(q)}` }, 
+            mimetype: "video/mp4", 
+            fileName: `${q}.mp4` 
+        }, { quoted: info })
+        .catch(e => {
             return reply("Erro ao tentar baixar o vídeo.");
         });
+
     } catch (e) {
         console.log(e);
-        return reply("não foi possível baixar ou encontrar esse video🐞");
+        return reply("Não foi possível baixar ou encontrar esse vídeo 🐞");
     }
 }
 break;
