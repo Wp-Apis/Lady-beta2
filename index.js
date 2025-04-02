@@ -8362,57 +8362,35 @@ case 'clipelink': case 'videolink': case 'ytbmp4': {
     }
 }
 break;
-case 'playdoc': case 'Playdoc':  {
+
+case 'playdoc': case 'Playdoc': {
     try {
-        if (!q.trim()) return reply(`- Exemplo: ${prefix}playdoc nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
-        
-        // Nova API para pesquisa
-        console.log('Buscando música com a query:', q);
-        data = await fetchJson(`https://world-ecletix.onrender.com/api/pesquisayt?query=${q}`);
-        
-        // Verifica se há resultados
-        if (!data || !data.formattedVideos || data.formattedVideos.length === 0) return reply("Desculpe, não consegui encontrar a música.");
+        if (!q.trim()) return reply(`- Exemplo: ${prefix}playdoc nome da música`);
 
-        // Pegando a primeira informação do array formattedVideos
-        const firstResult = data.formattedVideos[0];
-        console.log('Resultado da pesquisa obtido:', firstResult);
-
-        var N_E = " Não encontrado.";
-        var bla = `
-        ๖ۣ• Titulo: ${firstResult.title || N_E}
-        ๖ۣ• Tempo: ${firstResult.duration || N_E}
-        ๖ۣ• Canal: ${firstResult.channel || N_E}
-        ๖ۣ• Visualizações: ${firstResult.views || N_E}
-
-        ■■■■■ 100% 
-
-        E᥉ᥴ᥆ᥣhᥲ ᥙ꧑ᥲ ᥆ρᥴᥲ᥆...
-
-        Se desejar baixar o vídeo, use ${prefix}play_video ${firstResult.link.trim()}
-        `;
-
-        // Envia a imagem com os detalhes da música
-        console.log('Enviando imagem com detalhes da música...');
-        blackmd.sendMessage(from, { image: { url: firstResult.thumbnail || logoslink?.logo }, caption: bla }, { quoted: info });
-
-        // Nova API para download da música como documento
-        const audioUrl = `https://world-ecletix.onrender.com/api/musica?name=${encodeURIComponent(firstResult.title)}`;
+        // Gera a URL do áudio
+        const audioUrl = `https://world-ecletix.onrender.com/api/musica?name=${encodeURIComponent(q)}`;
         console.log('URL do áudio gerada:', audioUrl);
 
-        blackmd.sendMessage(from, { document: { url: audioUrl }, mimetype: "audio/mpeg", fileName: `${firstResult.title || 'play'}.mp3` }, { quoted: info })
-            .then(() => {
-                console.log('Música enviada como documento com sucesso.');
-            })
-            .catch(e => {
-                console.log('Erro ao enviar o documento de música:', e);
-                return reply("Erro ao tentar baixar a música.");
-            });
+        // Envia o áudio como documento
+        blackmd.sendMessage(from, { 
+            document: { url: audioUrl }, 
+            mimetype: "audio/mpeg", 
+            fileName: `${q}.mp3` // Agora está simples e direto
+        }, { quoted: info })
+        .then(() => {
+            console.log('Música enviada como documento com sucesso.');
+        })
+        .catch(e => {
+            console.log('Erro ao enviar o documento de música:', e);
+            return reply("Erro ao tentar baixar a música.");
+        });
+
     } catch (e) {
         console.log('Erro no bloco try-catch:', e);
-        return reply("não foi possível baixar ou encontrar esse áudio 🐞");
+        return reply("Não foi possível baixar ou encontrar esse áudio 🐞");
     }
 }
-break;
+break;        
 case 'audio':
 try {
     if (!q) return reply(`Informe o nome da música ou o link`);
