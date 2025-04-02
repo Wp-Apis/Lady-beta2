@@ -8242,34 +8242,7 @@ case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'musi
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}play nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
         
-        // Nova API para pesquisa
-        data = await fetchJson(`https://world-ecletix.onrender.com/api/pesquisayt?query=${q}`);
         
-        // Verifica se há resultados
-        if (!data || !data.formattedVideos || data.formattedVideos.length === 0) 
-            return reply("Desculpe, não consegui encontrar a música.");
-
-        // Pegando a primeira informação do array formattedVideos
-        const firstResult = data.formattedVideos[0];
-
-        var N_E = " Não encontrado.";
-        var bla = `
-        ๖ۣ• Titulo: ${firstResult.title || N_E}
-        ๖ۣ• Tempo: ${firstResult.duration || N_E}
-        ๖ۣ• Canal: ${firstResult.channel || N_E}
-        ๖ۣ• Visualizações: ${firstResult.views || N_E}
-
-        ■■■■■ 100% 
-
-        E᥉ᥴ᥆ᥣhᥲ ᥙ꧑ᥲ ᥆ρᥴᥲ᥆...
-
-        Se desejar baixar o vídeo, use ${prefix}play_video ${firstResult.link.trim()}
-        `;
-        
-        blackmd.sendMessage(from, { 
-            image: { url: firstResult.thumbnail || logoslink?.logo }, 
-            caption: bla 
-        }, { quoted: info });
 
         // Nova API para download de música (enviado como nota de voz)
         blackmd.sendMessage(from, { 
@@ -8293,31 +8266,6 @@ case 'Playvid': case 'playvideo': case 'playvid': case 'clipe': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}playvideo nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
         
-        // Nova API para pesquisa
-        data = await fetchJson(`https://world-ecletix.onrender.com/api/pesquisayt?query=${q}`);
-        
-        // Verifica se há resultados
-        if (!data || !data.formattedVideos || data.formattedVideos.length === 0) return reply("Desculpe, não consegui encontrar a música.");
-
-        // Pegando a primeira informação do array formattedVideos
-        const firstResult = data.formattedVideos[0];
-
-        var N_E = " Não encontrado.";
-        var bla = `
-        ๖ۣ• Titulo: ${firstResult.title || N_E}
-        ๖ۣ• Tempo: ${firstResult.duration || N_E}
-        ๖ۣ• Canal: ${firstResult.channel || N_E}
-        ๖ۣ• Visualizações: ${firstResult.views || N_E}
-
-        ■■■■■ 100% 
-
-        E᥉ᥴ᥆ᥣhᥲ ᥙ꧑ᥲ ᥆ρᥴᥲ᥆...
-
-        Se desejar baixar o áudio, use ${prefix}play ${firstResult.link.trim()}
-        `;
-        
-        blackmd.sendMessage(from, { image: { url: firstResult.thumbnail || logoslink?.logo }, caption: bla }, { quoted: info });
-
         // Nova API para download de vídeo
         blackmd.sendMessage(from, { video: { url: `https://world-ecletix.onrender.com/api/clipe?name=${encodeURIComponent(firstResult.title)}` }, mimetype: "video/mp4", fileName: firstResult.title || "play.mp4" }, { quoted: info }).catch(e => {
             return reply("Erro ao tentar baixar o vídeo.");
