@@ -8240,28 +8240,23 @@ break
 // DOWNLOADS
 case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'music': {
     try {
-        if (!q.trim()) return reply(`- Exemplo: ${prefix}play nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
-        
-        
+        if (!q.trim()) return reply(`- Exemplo: ${prefix}play nome da música`);
 
-        // Nova API para download de música (enviado como nota de voz)
+        // Enviar apenas o áudio usando a API diretamente
         blackmd.sendMessage(from, { 
             audio: { 
-                url: `https://world-ecletix.onrender.com/api/musica?name=${encodeURIComponent(firstResult.title)}` 
+                url: `https://world-ecletix.onrender.com/api/musica?name=${encodeURIComponent(q)}` 
             }, 
-            mimetype: "audio/mpeg", 
-            fileName: firstResult.title || "play.mp3",
-            ptt: true // Isso faz com que o áudio seja enviado como nota de voz
-        }, { quoted: info }).catch(e => {
-            return reply("Erro ao tentar baixar a música.");
-        });
+            mimetype: "audio/mpeg",
+            fileName: q || "play.mp3",
+            ptt: true 
+        }, { quoted: info }).catch(e => reply("Erro ao tentar baixar a música."));
 
     } catch (e) {
         console.log(e);
-        return reply("não foi possível baixar ou encontrar esse áudio🐞");
+        return reply("Não foi possível baixar ou encontrar esse áudio.");
     }
 }
-break;
 case 'Playvid': case 'playvideo': case 'playvid': case 'clipe': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}playvideo nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
