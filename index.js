@@ -8484,7 +8484,7 @@ break;
 case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'music': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}play nome da música`);
-
+        reagir(from, "⏬")
         // Enviar apenas o áudio usando a API diretamente
         blackmd.sendMessage(from, { 
             audio: { 
@@ -8500,6 +8500,7 @@ case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'musi
         return reply("Não foi possível baixar ou encontrar esse áudio.");
     }
 }
+break;
 case 'Playvid': case 'playvideo': case 'playvid': case 'clipe': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}playvideo nome da música\na música será baixada, só basta escolher áudio ou vídeo, se não baixar, o YouTube privou de não baixarem, ou algo do tipo..`);
@@ -8748,6 +8749,26 @@ try {
 } catch (error) {
     console.log(error);
     return reply('Ocorreu um erro, tente novamente mais tarde!');
+}
+break;
+case 'Spotify': case 'spotify': case 'spo': case 'spotify2': {
+    try {
+        if (!q.trim()) return reply(`- Exemplo: ${prefix}spotify nome da música`);
+        reagir(from, "⏬")
+        // Enviar apenas o áudio usando a API diretamente
+        blackmd.sendMessage(from, { 
+            audio: { 
+                url: `https://world-ecletix.onrender.com/api/spotify2?name=${encodeURIComponent(q)}` 
+            }, 
+            mimetype: "audio/mpeg",
+            fileName: q || "play.mp3",
+            ptt: true 
+        }, { quoted: info }).catch(e => reply("Erro ao tentar baixar a música."));
+
+    } catch (e) {
+        console.log(e);
+        return reply("Não foi possível baixar ou encontrar esse áudio.");
+    }
 }
 break;
 case "Instagram3":
@@ -9239,60 +9260,7 @@ return reply("Erro..")
 }
 break;
 
-case "Spotify":
-case "spotify":
-case "spo":
-{
-  if (!q) {
-    return blackmd.sendMessage(
-      from,
-      { text: `Por favor, forneça o nome da música. Exemplo: ${prefix}spotify nome_da_musica` },
-      { quoted: info }
-    );
-  }
 
-  try {
-    // Fazer a solicitação à API de música
-    const response = await axios.get(`https://world-ecletix.onrender.com/api/spotify?nome=${encodeURIComponent(q)}`);
-    const result = response.data;
-
-    // Verificar se a resposta contém as informações necessárias
-    if (!result || !result.trackInfo) {
-      return blackmd.sendMessage(from, { text: "Não foram encontrados resultados para a música fornecida." }, { quoted: info });
-    }
-
-    // Extrair informações da música
-    const { title, url } = result.trackInfo;
-    const downloadLink = result.downloadLink;
-
-    // Criar uma mensagem com as informações da música
-    const message = `
-🎵 *Título:* ${title}
-🔗 *Link no Spotify:* ${url}
-    `;
-
-    // Enviar informações da música
-    await blackmd.sendMessage(from, { text: message }, { quoted: info });
-
-    // Enviar o áudio baixado ao usuário diretamente pelo link
-    await blackmd.sendMessage(
-      from,
-      {
-        audio: { url: downloadLink },  // Enviando via URL
-        mimetype: 'audio/mpeg',  // Tipo correto do arquivo
-        fileName: `${title}.mp3`,  // Nome do arquivo
-        ptt: true  // Enviar como áudio de voz
-      },
-      { quoted: info }
-    );
-
-  } catch (error) {
-    console.error('Erro ao processar a solicitação:', error);
-    await blackmd.sendMessage(from, { audio: { url: './assets/voz/algodeuerrado.mp3' }, mimetype: 'audio/mp4' }, { quoted: info });
-    blackmd.sendMessage(from, { text: "Ocorreu um erro ao processar a solicitação." }, { quoted: info });
-  }
-}
-break;
 case 'pinterest':
     if (!q) return reply(`*_❕Coloque a busca que você deseja!_*\n- *🧑‍🏫 Por exemplo:* ${prefix + command} goku`);
 
