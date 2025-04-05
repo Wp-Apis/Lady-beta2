@@ -8484,7 +8484,7 @@ break;
 case 'play': case 'Play': case 'PLAY': case 'musica': case 'música': case 'music': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}play nome da música`);
-        reagir(from, "⏬")
+        
         // Enviar apenas o áudio usando a API diretamente
         blackmd.sendMessage(from, { 
             audio: { 
