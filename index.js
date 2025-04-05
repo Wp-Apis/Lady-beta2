@@ -8754,14 +8754,14 @@ break;
 case 'Spotify': case 'spotify': case 'spo': case 'spotify2': {
     try {
         if (!q.trim()) return reply(`- Exemplo: ${prefix}spotify nome da música`);
-        reagir(from, "⏬")
+        
         // Enviar apenas o áudio usando a API diretamente
         blackmd.sendMessage(from, { 
             audio: { 
                 url: `https://world-ecletix.onrender.com/api/spotify2?name=${encodeURIComponent(q)}` 
             }, 
             mimetype: "audio/mpeg",
-            fileName: q || "play.mp3",
+            fileName: q || "spotify.mp3",
             ptt: true 
         }, { quoted: info }).catch(e => reply("Erro ao tentar baixar a música."));
 
@@ -12962,26 +12962,18 @@ var boij2 = RSM?.imageMessage || info.message?.imageMessage || RSM?.viewOnceMess
 var boij = RSM?.videoMessage || info.message?.videoMessage || RSM?.viewOnceMessageV2?.message?.videoMessage || info.message?.viewOnceMessageV2?.message?.videoMessage || info.message?.viewOnceMessage?.message?.videoMessage || RSM?.viewOnceMessage?.message?.videoMessage
 if(boij2){
 var pack = permuteFigPackName(`❪👤𝚄𝚜𝚞á𝚛𝚒𝚘 (𝚊)ฺ࣭࣪͘ꕸ▸
-❪🤖𝙱𝚘𝚝ฺ࣭࣪͘ꕸ▸
-❪👑𝙳𝚘𝚗𝚘ฺ࣭࣪͘ꕸ▸
-❪🌐𝚂𝚒𝚝𝚎ฺ࣭࣪͘ꕸ▸`)
+❪🤖𝙱𝚘𝚝ฺ࣭࣪͘ꕸ▸`)
 var author2 = permuteFigAuthorName(`${pushname}
-${NomeDoBot}
-${NickDono}
-${blacksite}`)
+${NomeDoBot}`)
 reply(`❪∘̥⃟⸽⃟𝙲𝚘𝚗𝚟𝚎𝚛𝚝𝚎𝚗𝚍𝚘 𝙴𝚖 𝙵𝚒𝚐𝚞𝚛𝚒𝚗𝚑𝚊∘̥⃟৴▸`)
 owgi = await getFileBuffer(boij2, 'image')
 let encmediaa = await sendImageAsSticker2(blackmd, from, owgi, info, { packname:pack, author:author2})
 await DLT_FL(encmediaa)
 } else if(boij && boij.seconds < 11){
 var pack = permuteFigPackName(`❪👤𝚄𝚜𝚞á𝚛𝚒𝚘 (𝚊)ฺ࣭࣪͘ꕸ▸
-❪🤖𝙱𝚘𝚝ฺ࣭࣪͘ꕸ▸
-❪👑𝙳𝚘𝚗𝚘ฺ࣭࣪͘ꕸ▸
-❪🌐𝚂𝚒𝚝𝚎ฺ࣭࣪͘ꕸ▸`)
+❪🤖𝙱𝚘𝚝ฺ࣭࣪͘ꕸ▸`)
 var author2 = permuteFigAuthorName(`${pushname}
-${NomeDoBot}
-${NickDono}
-${blacksite}`)
+${NomeDoBot}`)
 reply(`❪∘̥⃟⸽⃟𝙲𝚘𝚗𝚟𝚎𝚛𝚝𝚎𝚗𝚍𝚘 𝙴𝚖 𝙵𝚒𝚐𝚞𝚛𝚒𝚗𝚑𝚊∘̥⃟৴▸`)
 owgi = await getFileBuffer(boij, 'video')
 let encmedia = await sendVideoAsSticker2(blackmd, from, owgi, info, { packname:pack, author:author2})
