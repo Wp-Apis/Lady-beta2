@@ -10,11 +10,11 @@
     "antidoc": false,
     "antictt": false,
     "antiloc": false,
-    "antilinkgp": false,
+    "antilinkgp": true,
     "banlinkgp": true,
     "antilinkhard": false,
     "banlinkhard": true,
-    "antifake": false,
+    "antifake": true,
     "antispam": false,
     "antinotas": false,
     "anticatalogo": false,
@@ -24,13 +24,13 @@
     "listanegra": [],
     "advertir": [],
     "prefixos": [
-      "!"
+      "!", "/", ".", "#"
     ],
     "legenda_estrangeiro": "0",
     "legenda_documento": "0",
     "legenda_video": "0",
     "legenda_imagem": "0",
-    "multiprefix": false,
+    "multiprefix": true,
     "antipalavrao": {
       "active": false,
       "palavras": []
