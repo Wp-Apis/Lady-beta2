@@ -7,7 +7,7 @@
   "antipv": false,
   "antipv2": false,
   "anticall": true,
-  "visualizarmsg": true,
+  "visualizarmsg": false,
   "modoaluguel": false,
   "msgpv": false,
   "botoff": false,
