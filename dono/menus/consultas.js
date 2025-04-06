@@ -1,4 +1,4 @@
-const menucon = (pushname, date, hora120, isVip, pushnames, prefix) => {
+const menudown = (sender, prefix) => {
 return `༒BEM-VINDO༒
 ╭───────────────╮
 │     CONSULTAS
