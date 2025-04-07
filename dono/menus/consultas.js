@@ -1,4 +1,4 @@
-const menudown = (sender, prefix) => {
+const menucon = (sender, prefix) => {
 return `༒BEM-VINDO༒
 ╭───────────────╮
 │     CONSULTAS
