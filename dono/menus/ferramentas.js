@@ -52,4 +52,4 @@ return `༒BEM-VINDO༒
 ` 
 }
 
-exports.menufer = menulogos
+exports.menufer = menufer
