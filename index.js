@@ -3452,7 +3452,7 @@ case 'wallpaper':
 case 'menuwall':
 case 'menuw':
 setTimeout(() => {reagir(from, "❄️")}, 300)
-const { menuwall } = require("./dono/menus/wallpapers.js")
+const { menuwal } = require("./dono/menus/wallpapers.js")
 wall = menuwal(sender, prefix)
 sendMenu(wall)
 break
