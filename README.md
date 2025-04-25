@@ -57,7 +57,7 @@ pkg install -y ffmpeg nodejs-lts wget tesseract git
 ````
 4 - COMANDO: 🐞
 ````bash
-cd /sdcard && git clone https://github.com/Powerapis/Lady-bot-v4.4.git
+cd /sdcard && git clone https://github.com/PWp-Apis/Lady-beta2.git
 ````
 5 - COMANDO: 🐞
 ````bash
