@@ -1,20 +1,19 @@
 //｡☆✼★━━━━━━━━━━━━━━━━★✼☆｡
 //.        LADY BUG BUTECA
 //｡☆✼★━━━━━━━━━━━━━━━━★✼☆｡
-//const express = require('express');
-
-//const app = express();
-//const PORT = process.env.PORT || 3000; // Define a porta aqui
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000; // Define a porta aqui
 
 // Rota básica
-//app.get('/', (req, res) => {
- //   res.send('Lady bot esta online!');
-//});
+app.get('/', (req, res) => {
+   res.send('Lady bot esta online!');
+});
 
 // Inicia o servidor
-//app.listen(PORT, () => {
- //   console.log(`Servidor rodando na porta ${PORT}`);
-//});
+app.listen(PORT, () => {
+   console.log(`Servidor rodando na porta ${PORT}`);
+});
 
 //=======================================*/
 
