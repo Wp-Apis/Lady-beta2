@@ -9,15 +9,15 @@
     "antisticker": false,
     "antidoc": false,
     "antictt": false,
-    "antiloc": false,
+    "antiloc": true,
     "antilinkgp": true,
     "banlinkgp": true,
     "antilinkhard": false,
     "banlinkhard": true,
     "antifake": true,
     "antispam": false,
-    "antinotas": false,
-    "anticatalogo": false,
+    "antinotas": true,
+    "anticatalogo": true,
     "modorpg": false,
     "visuUnica": false,
     "soadm": false,
@@ -81,10 +81,10 @@
     "autosticker": false,
     "autoresposta": true,
     "jogos": true,
-    "level": false,
+    "level": true,
     "bangp": false,
     "nsfw": true,
-    "antiporno": false,
-    "autotranscricao": true
+    "antiporno": true,
+    "autotranscricao": false
   }
 ]
