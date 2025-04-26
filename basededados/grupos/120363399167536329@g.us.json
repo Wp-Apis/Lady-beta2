@@ -24,7 +24,7 @@
     "listanegra": [],
     "advertir": [],
     "prefixos": [
-      ",", "/", ".", "#"
+      "|", "/", ".", "#"
     ],
     "legenda_estrangeiro": "0",
     "legenda_documento": "0",
@@ -79,12 +79,12 @@
     "simi1": false,
     "simi2": false,
     "autosticker": false,
-    "autoresposta": false,
+    "autoresposta": true,
     "jogos": true,
     "level": false,
     "bangp": false,
     "nsfw": true,
-    "antiporno": false,
+    "antiporno": true,
     "autotranscricao": false
   }
 ]
