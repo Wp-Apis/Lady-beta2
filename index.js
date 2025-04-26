@@ -4,7 +4,8 @@
 const express = require('express');
 
 const app = express();
-/const PORT = process.env.PORT || 3000; // Define a porta aqui
+/const PORT = process.env.PORT || 3000;
+// Define a porta aqui
 
 // Rota básica
 app.get('/', (req, res) => {
