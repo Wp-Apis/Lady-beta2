@@ -1,8 +1,8 @@
 //｡☆✼★━━━━━━━━━━━━━━━━★✼☆｡
 //.        LADY BUG BUTECA
 //｡☆✼★━━━━━━━━━━━━━━━━★✼☆｡
-const express = require('express');
 
+const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,9 +15,8 @@ app.get('/', (req, res) => {
 
 // Inicia o servidor
 app.listen(PORT, () => {
-   console.log(Servidor rodando na porta ${PORT});
+   console.log(`Servidor rodando na porta ${PORT}`);
 });
-
 
 //=======================================*/
 
