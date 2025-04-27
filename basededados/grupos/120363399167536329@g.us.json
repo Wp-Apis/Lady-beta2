@@ -2,7 +2,7 @@
   {
     "name": "★༒𝐼𝑀𝒫𝐸𝑅𝐼𝒪 𝒜𝒩𝒢𝐸𝐿𝐼𝒞𝒜𝐿༒★",
     "groupId": "120363399167536329@g.us",
-    "x9": true,
+    "x9": false,
     "antiimg": false,
     "antivideo": false,
     "antiaudio": false,
@@ -79,12 +79,12 @@
     "simi1": false,
     "simi2": false,
     "autosticker": false,
-    "autoresposta": true,
+    "autoresposta": false,
     "jogos": true,
     "level": false,
     "bangp": false,
     "nsfw": true,
-    "antiporno": true,
+    "antiporno": false,
     "autotranscricao": false
   }
 ]
