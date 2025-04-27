@@ -27466,12 +27466,12 @@ if(budy2.includes("verdade") || budy2.includes("Verdade") || budy2.includes("VER
     blackmd.sendMessage(from, {audio: {url:'./database/audios/verdade.mp3'}, mimetype: 'audio/mp4', ptt:true})
 }
 
-if (budy2.includes("oi") || 
+if (budy2.includes("oii") || 
     budy2.includes("Oi") || 
     budy2.includes("Olá") || 
-    budy2.includes("opa") || 
+    budy2.includes("opa ") || 
     budy2.includes("Aoba") || 
-    budy2.includes("aoba") || 
+    budy2.includes("aoba ") || 
     budy2.includes("olá"))  {
     
     // Resposta com áudio
