@@ -276,7 +276,7 @@ if(BLKMD.action === 'add') {
     } catch(e) { ftgp = 'https://telegra.ph/file/d9909cc45b86459fcb8a9.jpg' }
     blackmd.sendMessage(from, {
       image: {
-        url: blacksite+`/api/canvas/jxr/welcome?nome=${encodeURI(getname(m4thxyz_))}&guilda=${encodeURI(mdata_2.subject)}&avatar=${ppimg}&membro=${mdata_2.participants.length}&perfil=${ftgp}&fundo=`+welkom[0].fundobemvindo
+        url: `https://blacksystemofc.com.br/api/canvas/jxr/welcome?nome=${encodeURI(getname(m4thxyz_))}&guilda=${encodeURI(mdata_2.subject)}&avatar=${ppimg}&membro=${mdata_2.participants.length}&perfil=${ftgp}&fundo=`+welkom[0].fundobemvindo
       },
       caption: descbv(0),
       mentions: BLKMD.participants
@@ -345,7 +345,7 @@ if(BLKMD.action === 'add') {
   if(isByed) {
     blackmd.sendMessage(from, {
       image: {
-        url: blacksite+`/welcome?titulo=${encodeURI(tempo.toUpperCase())}&nome=Bye%20Bye%20${encodeURI(getname(m4thxyz_))}&perfil=${ppimg}&fundo=${jsonGp[0].wellcome[0].fundosaiu}&grupo=Saiu%20de%20${encodeURI(mdata_2.subject)}`},
+        url: `https://blacksystemofc.com.br/welcome?titulo=${encodeURI(tempo.toUpperCase())}&nome=Bye%20Bye%20${encodeURI(getname(m4thxyz_))}&perfil=${ppimg}&fundo=${jsonGp[0].wellcome[0].fundosaiu}&grupo=Saiu%20de%20${encodeURI(mdata_2.subject)}`},
         caption: descsaiu(0),
         mentions: BLKMD.participants
       })
