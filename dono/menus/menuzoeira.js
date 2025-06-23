@@ -25,7 +25,9 @@ return `༒BEM-VINDO༒
  | ೈ፝͜͡🤪 ${prefix}pegarpeito
  | ೈ፝͜͡🤪 ${prefix}pegarbunda
  | ೈ፝͜͡🤪 ${prefix}pegarpau
- | ೈ፝͜͡🤪 ${prefix}clt
+ | ೈ፝͜͡🤪 ${prefix}clt 
+ | ೈ፝͜͡🤪 ${prefix}fedendo 
+ | ೈ፝͜͡🤪 ${prefix}banho
  | ೈ፝͜͡🤪 ${prefix}matar
  | ೈ፝͜͡🤪 ${prefix}lavar
  | ೈ፝͜͡🤪 ${prefix}sentar
@@ -59,6 +61,8 @@ return `༒BEM-VINDO༒
  | ೈ፝͜͡🤪 ${prefix}nazista
  | ೈ፝͜͡🤪 ${prefix}pau
  | ೈ፝͜͡🤪 ${prefix}bct
+ | ೈ፝͜͡🤪 ${prefix}safada
+ | ೈ፝͜͡🤪 ${prefix}safado
  | ೈ፝͜͡🤪 ${prefix}rankgay
  | ೈ፝͜͡🤪 ${prefix}rankhetero
  | ೈ፝͜͡🤪 ${prefix}rankpocoto

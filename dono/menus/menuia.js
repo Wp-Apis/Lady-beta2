@@ -43,6 +43,7 @@ return `༒BEM-VINDO༒
  | ೈ፝͜͡🤖 ${prefix}blackboxai
  | ೈ፝͜͡🤖 ${prefix}blackboxai-pro
 ╰═══════════════════════╮
+    📷 𝑮𝑬𝑹𝑨𝑹 𝑽𝑰𝑫𝑬𝑶/𝑭𝑶𝑻𝑶 🎥
 ╭═══════════════════════╯
  | ೈ፝͜͡🤖 ${prefix}deepimage (128 modelos)
  | ೈ፝͜͡🤖 ${prefix}animarfoto (foto vira desenho)
@@ -77,12 +78,36 @@ return `༒BEM-VINDO༒
  | ೈ፝͜͡🤖 ${prefix}gerar-foto
  | ೈ፝͜͡🤖 ${prefix}imagine
  | ೈ፝͜͡🤖 ${prefix}imagine2
- | ೈ፝͜͡🤖 ${prefix}imagine3
+ | ೈ፝͜͡🤖 ${prefix}imagine3 
+ | ೈ፝͜͡🤖 ${prefix}imagine4 
+ | ೈ፝͜͡🤖 ${prefix}imagine5
  | ೈ፝͜͡🤖 ${prefix}fluximg
  | ೈ፝͜͡🤖 ${prefix}sd 
  | ೈ፝͜͡🤖 ${prefix}imgsys
- | ೈ፝͜͡🤖 ${prefix}orbital-img
-╰════════════════════╯`
+ | ೈ፝͜͡🤖 ${prefix}orbital-img 
+╰═════════════════════╮
+    🎙️ 𝑮𝑬𝑹𝑨𝑹 𝑨𝑼𝑫𝑰𝑶 🎶
+╭═════════════════════╯
+| ೈ፝͜͡🤖 ${prefix}audio_aria  
+| ೈ፝͜͡🤖 ${prefix}audio_sarah  
+| ೈ፝͜͡🤖 ${prefix}audio_laura  
+| ೈ፝͜͡🤖 ${prefix}audio_charlie  
+| ೈ፝͜͡🤖 ${prefix}audio_george  
+| ೈ፝͜͡🤖 ${prefix}audio_callum  
+| ೈ፝͜͡🤖 ${prefix}audio_river  
+| ೈ፝͜͡🤖 ${prefix}audio_liam  
+| ೈ፝͜͡🤖 ${prefix}audio_charlotte  
+| ೈ፝͜͡🤖 ${prefix}audio_alice  
+| ೈ፝͜͡🤖 ${prefix}audio_matilda  
+| ೈ፝͜͡🤖 ${prefix}audio_will  
+| ೈ፝͜͡🤖 ${prefix}audio_jessica  
+| ೈ፝͜͡🤖 ${prefix}audio_eric  
+| ೈ፝͜͡🤖 ${prefix}audio_chris  
+| ೈ፝͜͡🤖 ${prefix}audio_brian  
+| ೈ፝͜͡🤖 ${prefix}audio_daniel  
+| ೈ፝͜͡🤖 ${prefix}audio_lily  
+| ೈ፝͜͡🤖 ${prefix}audio_bill
+╰═══════════════════════`
 }
 
 exports.menuia = menuia

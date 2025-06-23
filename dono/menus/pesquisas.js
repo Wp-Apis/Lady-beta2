@@ -53,7 +53,8 @@ return `༒BEM-VINDO༒
 | ೈ፝͜͡🔎│${prefix}gitstalk
 | ೈ፝͜͡🔎│${prefix}gitstalk
 | ೈ፝͜͡🔎│${prefix}gimage
- ೈ፝͜͡🔎│${prefix}jogador
+| ೈ፝͜͡🔎│${prefix}fixjogador 
+| ೈ፝͜͡🔎│${prefix}pobreflix (nome do filme)
 ╰─────────────────`
 }
 

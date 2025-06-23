@@ -44,7 +44,9 @@ return `༒BEM-VINDO༒
  | ೈ፝͜͡💿 ${prefix}drivevid
  | ೈ፝͜͡💿 ${prefix}driveaud
  | ೈ፝͜͡💿 ${prefix}mediafire
- | ೈ፝͜͡💿 ${prefix}gitclone
+ | ೈ፝͜͡💿 ${prefix}gitclone 
+ | ೈ፝͜͡💿 ${prefix}zacariasdw ( link)
+ | ೈ፝͜͡💿 ${prefix}pornoblog ( link )
  | ೈ፝͜͡💿 ${prefix}xvdow (link do xv)
  | ೈ፝͜͡💿 ${prefix}xnxxdow (link do xnxx)
 ╰════════════════════╮`
